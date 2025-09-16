@@ -4,18 +4,28 @@
   "description": "To do app",
   "version": "0.0.1",
   "engines": {
-    "vscode": "^1.104.0"
+    "vscode": "^1.102.0"
   },
   "categories": [
     "Other"
   ],
-  "activationEvents": [],
+  "activationEvents": [
+    "onCommand:vstodo.helloWorld",
+    "onCommand:vstodo.askQuestion"
+
+  ],
   "main": "./dist/extension.js",
   "contributes": {
     "commands": [
       {
         "command": "vstodo.helloWorld",
         "title": "Hello World"
+      },
+
+      {
+        "command": "vstodo.askQuestion",
+        "category": "VSTodo",
+        "title": "Ask Question"
       }
     ]
   },
@@ -31,7 +41,7 @@
     "test": "vscode-test"
   },
   "devDependencies": {
-    "@types/vscode": "^1.104.0",
+    "@types/vscode": "^1.102.0",
     "@types/mocha": "^10.0.10",
     "@types/node": "22.x",
     "@typescript-eslint/eslint-plugin": "^8.42.0",
